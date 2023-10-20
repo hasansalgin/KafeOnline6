@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
-            dgvSiparisler = new DataGridView();
-            dgvSiparisDetaylar = new DataGridView();
             label1 = new Label();
+            dgvSiparisler = new DataGridView();
             label2 = new Label();
+            dgvSiparisDetaylar = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -61,26 +61,6 @@
             splitContainer1.SplitterDistance = 233;
             splitContainer1.TabIndex = 0;
             // 
-            // dgvSiparisler
-            // 
-            dgvSiparisler.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvSiparisler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSiparisler.Location = new Point(0, 31);
-            dgvSiparisler.Name = "dgvSiparisler";
-            dgvSiparisler.RowTemplate.Height = 25;
-            dgvSiparisler.Size = new Size(797, 191);
-            dgvSiparisler.TabIndex = 0;
-            // 
-            // dgvSiparisDetaylar
-            // 
-            dgvSiparisDetaylar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvSiparisDetaylar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSiparisDetaylar.Location = new Point(0, 38);
-            dgvSiparisDetaylar.Name = "dgvSiparisDetaylar";
-            dgvSiparisDetaylar.RowTemplate.Height = 25;
-            dgvSiparisDetaylar.Size = new Size(800, 191);
-            dgvSiparisDetaylar.TabIndex = 0;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -91,6 +71,25 @@
             label1.TabIndex = 1;
             label1.Text = "Siparişler";
             // 
+            // dgvSiparisler
+            // 
+            dgvSiparisler.AllowUserToAddRows = false;
+            dgvSiparisler.AllowUserToDeleteRows = false;
+            dgvSiparisler.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvSiparisler.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvSiparisler.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvSiparisler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSiparisler.Location = new Point(0, 31);
+            dgvSiparisler.MultiSelect = false;
+            dgvSiparisler.Name = "dgvSiparisler";
+            dgvSiparisler.ReadOnly = true;
+            dgvSiparisler.RowHeadersVisible = false;
+            dgvSiparisler.RowTemplate.Height = 25;
+            dgvSiparisler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvSiparisler.Size = new Size(797, 191);
+            dgvSiparisler.TabIndex = 0;
+            dgvSiparisler.SelectionChanged += dgvSiparisler_SelectionChanged;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -100,6 +99,24 @@
             label2.Size = new Size(135, 21);
             label2.TabIndex = 1;
             label2.Text = "Sipariş Detayları";
+            // 
+            // dgvSiparisDetaylar
+            // 
+            dgvSiparisDetaylar.AllowUserToAddRows = false;
+            dgvSiparisDetaylar.AllowUserToDeleteRows = false;
+            dgvSiparisDetaylar.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvSiparisDetaylar.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dgvSiparisDetaylar.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvSiparisDetaylar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSiparisDetaylar.Location = new Point(0, 38);
+            dgvSiparisDetaylar.MultiSelect = false;
+            dgvSiparisDetaylar.Name = "dgvSiparisDetaylar";
+            dgvSiparisDetaylar.ReadOnly = true;
+            dgvSiparisDetaylar.RowHeadersVisible = false;
+            dgvSiparisDetaylar.RowTemplate.Height = 25;
+            dgvSiparisDetaylar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvSiparisDetaylar.Size = new Size(800, 191);
+            dgvSiparisDetaylar.TabIndex = 0;
             // 
             // GecmisSiparislerForm
             // 
